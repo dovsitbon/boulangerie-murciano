@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://boulangerie-murciano.vercel.app/sitemap.xml

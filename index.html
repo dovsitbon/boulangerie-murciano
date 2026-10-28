@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <!-- ============ SEO ============ -->
+  <title>Boulangerie Murciano · Boulangerie cachère rue des Rosiers, Marais</title>
+  <meta name="description" content="Boulangerie cachère depuis 1909 au 16 rue des Rosiers (Marais, Paris 4e) : cheesecake, strudel, babka au chocolat, 'hallot. Sur place, à emporter, livraison.">
+  <link rel="canonical" href="https://boulangerie-murciano.vercel.app/">
+  <meta name="theme-color" content="#1B2A4A">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Boulangerie Murciano">
+  <meta property="og:title" content="Boulangerie Murciano · Boulangerie cachère du Marais depuis 1909">
+  <meta property="og:description" content="Cheesecake, strudel, babka, 'hallot et pains au 16 rue des Rosiers, Paris 4e.">
+  <meta property="og:image" content="https://boulangerie-murciano.vercel.app/images/hero-2-babka.jpg">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script>document.documentElement.classList.add("js");</script>
+
+  <!-- ============ Polices (Google Fonts) ============ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+  <link rel="preload" as="image" href="images/hero-1-pains.jpg" fetchpriority="high">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- ============ Données structurées (Schema.org) ============
+       ⚠ Horaires À CONFIRMER : à garder identiques à js/config.js -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "@id": "https://boulangerie-murciano.vercel.app/#bakery",
+    "name": "Boulangerie Murciano",
+    "alternateName": "Murciano Boulangerie Pâtisserie",
+    "description": "Boulangerie-pâtisserie cachère du Marais depuis 1909 : pâtisseries françaises et ashkénazes, pains, 'hallot, viennoiseries et café.",
+    "foundingDate": "1909",
+    "url": "https://boulangerie-murciano.vercel.app/",
+    "telephone": "+33148874888",
+    "image": "https://boulangerie-murciano.vercel.app/images/hero-2-babka.jpg",
+    "priceRange": "€",
+    "servesCuisine": ["Française", "Ashkénaze", "Cachère"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "16 rue des Rosiers",
+      "addressLocality": "Paris",
+      "postalCode": "75004",
+      "addressRegion": "Île-de-France",
+      "addressCountry": "FR"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 48.8570207, "longitude": 2.3598353 },
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=Boulangerie%20Murciano%2016%20rue%20des%20Rosiers%2075004%20Paris",
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"], "opens": "08:30", "closes": "19:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "08:30", "closes": "15:00" }
+    ],
+    "acceptsReservations": false,
+    "areaServed": "Paris",
+    "knowsLanguage": ["fr", "en", "he"],
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "Cachère (sous la surveillance du Rav Rottenberg)", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Vente à emporter", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Livraison", "value": true }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "La Boulangerie Murciano est-elle cachère ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. La boulangerie est cachère, sous la surveillance du Rav Rottenberg." } },
+      { "@type": "Question", "name": "La boulangerie est-elle ouverte le samedi ?", "acceptedAnswer": { "@type": "Answer", "text": "Non, la boutique est fermée le samedi pour Chabbat et ferme plus tôt le vendredi." } },
+      { "@type": "Question", "name": "Comment venir à la Boulangerie Murciano ?", "acceptedAnswer": { "@type": "Answer", "text": "Au 16 rue des Rosiers, Paris 4e. Métro Saint-Paul (ligne 1), à environ 5 minutes à pied." } },
+      { "@type": "Question", "name": "Peut-on commander un gâteau pour une bar-mitsva ou un mariage ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui : gâteaux sur mesure, buffets et plateaux pour bar et bat-mitsva, mariages, Chabbat et fêtes juives, sur commande." } }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <!-- ============ Sprite d'icônes SVG (réutilisées via <use>) ============ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" d="M5 3.5h3.2l1.6 4.2-2 1.3a11 11 0 0 0 7.2 7.2l1.3-2 4.2 1.6V19a1.6 1.6 0 0 1-1.7 1.6C10.4 20.1 3.9 13.6 3.4 5.2A1.6 1.6 0 0 1 5 3.5Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M12 21s-6.5-6.1-6.5-11a6.5 6.5 0 0 1 13 0c0 4.9-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" d="m12 2.8 9.2 9.2-9.2 9.2L2.8 12Z"/><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M9 14v-2.5a1.5 1.5 0 0 1 1.5-1.5H15m-2-2 2 2-2 2"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M12 7.5V12l3 2"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" d="M5 8h14l-1 12H6Z"/><path fill="none" stroke="currentColor" stroke-width="1.5" d="M9 10V7a3 3 0 0 1 6 0v3"/></symbol>
+    <symbol id="i-bike" viewBox="0 0 24 24"><circle cx="6" cy="16.5" r="3.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="16.5" r="3.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" d="M6 16.5 9.5 9h6l2.5 7.5M9.5 9 12 16.5h-6M14 6h3"/></symbol>
+    <symbol id="i-metro" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.5"/><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M7.5 16.5v-9l4.5 6 4.5-6v9"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2.6 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5-4.7-4.6 6.5-.9Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M4 12h15m-5-5 5 5-5 5"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5Z"/></symbol>
+    <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" d="M13.5 21v-7.5H16l.5-3h-3V8.6c0-.9.4-1.6 1.7-1.6h1.5V4.3a17 17 0 0 0-2.3-.2c-2.4 0-3.9 1.4-3.9 4v2.4H8v3h2.5V21"/></symbol>
+    <!-- 'Hallah du logo -->
+    <symbol id="i-hallah" viewBox="0 0 64 40"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 24c-1-6 4-11 10-10 4 1 6 5 5 9-1 5-7 7-11 5"/><path d="M17 15c3-6 11-7 15-3 3 3 3 8-1 11-4 3-10 2-12-2"/><path d="M30 13c4-5 12-5 15 0 2 4 0 9-5 10-4 1-8-1-9-5"/><path d="M43 15c5-3 12-1 13 5 1 5-4 9-9 8-4-1-6-4-5-8"/><path d="M10 28c4 5 12 6 18 3m2 0c6 3 14 3 19-2"/></g></symbol>
+    <!-- Arabesque dorée (séparateurs) -->
+    <symbol id="i-orn" viewBox="0 0 160 20"><g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><path d="M2 10h50"/><path d="M52 10c6-7 14-7 14-1 0 4-5 4-5 1"/><path d="M158 10h-50"/><path d="M108 10c-6-7-14-7-14-1 0 4 5 4 5 1"/><path d="M70 10c3-4 7-4 10 0 3 4 7 4 10 0" /></g><path d="m80 4 3 6-3 6-3-6Z" fill="currentColor"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#contenu" data-i18n="skip">Aller au contenu</a>
+
+  <!-- ============ Bandeau cachère ============ -->
+  <div class="kosher-bar" role="note">
+    <span class="kosher-bar__dot" aria-hidden="true"></span>
+    <span data-i18n="kosher.bar">Établissement cachère · sous la surveillance du Rav Rottenberg</span>
+    <!-- CERTIFICATION À CONFIRMER : nom exact du Beth Din / de la surveillance -->
+  </div>
+
+  <!-- ============ Header ============ -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <button class="icon-btn burger" id="menuBtn" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu" data-i18n-aria="menu.open">
+        <span class="burger__lines" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="burger__label" data-i18n="menu.label">Menu</span>
+      </button>
+
+      <a class="logo" href="#accueil" aria-label="Boulangerie Murciano, accueil">
+        <span class="logo__name" translate="no">Murciano</span>
+        <span class="logo__since"><span data-i18n="logo.since">depuis</span> 1909</span>
+      </a>
+
+      <div class="header__actions">
+        <button class="lang-switch" id="langBtn" type="button" aria-label="Switch to English" data-i18n-aria="lang.aria">
+          <span class="lang-switch__opt" data-lang-opt="fr">FR</span><span aria-hidden="true">/</span><span class="lang-switch__opt" data-lang-opt="en">EN</span>
+        </button>
+        <a class="icon-btn hide-sm" href="tel:+33148874888" data-tel aria-label="Appeler la boulangerie" data-i18n-aria="cta.callAria"><svg width="22" height="22"><use href="#i-phone"/></svg></a>
+        <a class="icon-btn hide-sm" href="https://www.google.com/maps/dir/?api=1&amp;destination=Boulangerie%20Murciano%2016%20rue%20des%20Rosiers%2075004%20Paris" target="_blank" rel="noopener" aria-label="Itinéraire vers la boulangerie" data-i18n-aria="cta.routeAria"><svg width="22" height="22"><use href="#i-pin"/></svg></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ Menu latéral ============ -->
+  <div class="menu" id="menu" hidden>
+    <div class="menu__backdrop" data-close></div>
+    <nav class="menu__panel" aria-label="Menu principal" data-i18n-aria="menu.nav">
+      <button class="icon-btn menu__close" data-close aria-label="Fermer le menu" data-i18n-aria="menu.close">
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </button>
+      <p class="menu__brand">Murciano</p>
+      <ul class="menu__links">
+        <li><a href="#accueil" data-i18n="nav.home">Accueil</a></li>
+        <li><a href="#histoire" data-i18n="nav.story">Notre histoire</a></li>
+        <li><a href="#produits" data-i18n="nav.products">Nos produits</a></li>
+        <li><a href="#commandes" data-i18n="nav.orders">Commandes de fêtes</a></li>
+        <li><a href="#infos" data-i18n="nav.info">Infos pratiques</a></li>
+      </ul>
+      <div class="menu__foot">
+        <p><span class="status" data-open-status></span></p>
+        <p>16 rue des Rosiers, 75004 Paris</p>
+        <p><a href="tel:+33148874888" data-tel>01 48 87 48 88</a></p>
+      </div>
+    </nav>
+  </div>
+
+  <main id="contenu">
+
+    <!-- ============ HERO / carrousel ============ -->
+    <section class="hero" id="accueil" aria-roledescription="carrousel" aria-label="Boulangerie Murciano">
+      <div class="hero__slides">
+        <div class="hero__slide is-active" data-slide>
+          <img src="images/hero-1-pains.jpg" alt="Pains de campagne au levain, croûte farinée, sur une table de boulanger" fetchpriority="high" width="1600" height="1000">
+          <div class="hero__content">
+            <p class="script hero__script" data-i18n="hero.1.script">Depuis 1909 dans le Marais</p>
+            <h1 class="hero__title">Boulangerie Murciano</h1>
+            <p class="hero__lead" data-i18n="hero.1.lead">Boulangerie · Pâtisserie cachère, au 16 rue des Rosiers.</p>
+          </div>
+        </div>
+        <div class="hero__slide" data-slide aria-hidden="true">
+          <img src="images/hero-2-babka.jpg" alt="Babka au chocolat tranchée, servie avec un café" loading="lazy" width="1600" height="1000">
+          <div class="hero__content">
+            <p class="script hero__script" data-i18n="hero.2.script">Recettes ashkénazes</p>
+            <h2 class="hero__title" data-i18n="hero.2.title">Babka, strudel &amp; cheesecake</h2>
+            <p class="hero__lead" data-i18n="hero.2.lead">Les douceurs qui font l'âme de la rue des Rosiers.</p>
+          </div>
+        </div>
+        <div class="hero__slide" data-slide aria-hidden="true">
+          <img src="images/hero-3-vitrine.jpg" alt="Vitrine de boulangerie garnie de viennoiseries et de pains" loading="lazy" width="1600" height="1000">
+          <div class="hero__content">
+            <p class="script hero__script" data-i18n="hero.3.script">Chaque matin</p>
+            <h2 class="hero__title" data-i18n="hero.3.title">Pains, 'hallot &amp; viennoiseries</h2>
+            <p class="hero__lead" data-i18n="hero.3.lead">Pour le petit-déjeuner, le déjeuner et la table du Chabbat.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__ctas">
+        <a class="btn btn--gold" href="#specialites" data-i18n="hero.cta1">Nos spécialités</a>
+        <a class="btn btn--ghost" href="#commandes" data-i18n="hero.cta2">Commander pour une fête</a>
+      </div>
+
+      <div class="hero__dots" role="group" aria-label="Choisir une diapositive" data-i18n-aria="hero.dots">
+        <button class="hero__dot is-active" aria-label="Diapositive 1" aria-current="true"></button>
+        <button class="hero__dot" aria-label="Diapositive 2"></button>
+        <button class="hero__dot" aria-label="Diapositive 3"></button>
+        <button class="hero__pause" id="heroPause" type="button" aria-label="Mettre le diaporama en pause" aria-pressed="false">
+          <svg class="hero__pause-i" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 1.5v9M9 1.5v9" stroke="currentColor" stroke-width="1.6"/></svg>
+          <svg class="hero__play-i" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 1.5v9l7-4.5Z" fill="currentColor"/></svg>
+        </button>
+      </div>
+      <a class="hero__scroll" href="#presentation" aria-label="Défiler vers la présentation" data-i18n-aria="hero.scroll"><span></span></a>
+    </section>
+
+    <!-- ============ Présentation ============ -->
+    <section class="intro section tiles" id="presentation">
+      <div class="container narrow center reveal">
+        <svg class="orn" width="160" height="20" aria-hidden="true"><use href="#i-orn"/></svg>
+        <p class="script script--lg" data-i18n="intro.script">Tradition &amp; savoir-faire</p>
+        <h2 class="h2" data-i18n="intro.title">Le patrimoine gourmand du Marais</h2>
+        <p class="lead" data-i18n="intro.text">Au cœur du Marais, rue des Rosiers, la Boulangerie Murciano perpétue depuis 1909 une double tradition : celle de la boulangerie-pâtisserie française et celle des recettes ashkénazes qui ont fait l'âme du quartier. Babka, strudel, gâteau au pavot, 'hallot du vendredi… une adresse de quartier cachère, où l'on vient pour le goût et où l'on revient pour l'accueil.</p>
+        <ul class="intro__facts">
+          <li><strong>1909</strong><span data-i18n="intro.f1">dans le Marais</span></li>
+          <li><strong data-i18n="intro.f2a">Cachère</strong><span data-i18n="intro.f2">Rav Rottenberg</span></li>
+          <li><strong>4,1 ★</strong><span data-i18n="intro.f3">586 avis Google</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ Spécialités (éditorial gauche / droite) ============ -->
+    <section class="specials" id="specialites" aria-labelledby="specials-title">
+      <h2 class="visually-hidden" id="specials-title" data-i18n="specials.title">Nos spécialités</h2>
+
+      <article class="feature">
+        <div class="feature__text reveal">
+          <p class="eyebrow" data-i18n="sp.1.eyebrow">La plus demandée</p>
+          <h3 class="h2" data-i18n="sp.1.title">Babka au chocolat</h3>
+          <p data-i18n="sp.1.text">Une brioche tressée et roulée, généreusement marbrée de chocolat, à la mie filante et au dessus caramélisé. À partager au petit-déjeuner, au goûter, ou à rapporter dans sa valise.</p>
+          <a class="link-arrow" href="#produits" data-filter-link="ashkenazes"><span data-i18n="sp.more">Voir les pâtisseries ashkénazes</span><svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+        <figure class="feature__media zoom reveal">
+          <img src="images/babka-chocolat.jpg" alt="Babka au chocolat tressée sur une assiette, entourée de noisettes" loading="lazy" width="900" height="1064">
+        </figure>
+      </article>
+
+      <article class="feature feature--reverse">
+        <div class="feature__text reveal">
+          <p class="eyebrow" data-i18n="sp.2.eyebrow">Le classique de la maison</p>
+          <h3 class="h2" data-i18n="sp.2.title">Gâteau au fromage</h3>
+          <p data-i18n="sp.2.text">Le cheesecake à l'ancienne, dense et fondant, au fromage blanc et à la vanille. Une recette de tradition ashkénaze, celle que les habitués viennent chercher le vendredi et les touristes découvrent rue des Rosiers.</p>
+          <a class="link-arrow" href="#produits" data-filter-link="ashkenazes"><span data-i18n="sp.more">Voir les pâtisseries ashkénazes</span><svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+        <figure class="feature__media zoom reveal">
+          <img src="images/cheesecake.jpg" alt="Part de gâteau au fromage (cheesecake) sur une assiette sombre" loading="lazy" width="1100" height="1300">
+        </figure>
+      </article>
+
+      <article class="feature">
+        <div class="feature__text reveal">
+          <p class="eyebrow" data-i18n="sp.3.eyebrow">Pâte feuilletée, pommes &amp; cannelle</p>
+          <h3 class="h2" data-i18n="sp.3.title">Strudel &amp; gâteau au pavot</h3>
+          <p data-i18n="sp.3.text">Le strudel aux pommes, raisins et cannelle, et le gâteau au pavot, moelleux et parfumé : deux incontournables d'Europe centrale qui ont traversé les générations jusqu'au Marais.</p>
+          <a class="link-arrow" href="#produits" data-filter-link="ashkenazes"><span data-i18n="sp.more">Voir les pâtisseries ashkénazes</span><svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+        <figure class="feature__media zoom reveal">
+          <img src="images/strudel.jpg" alt="Tranche de strudel aux pommes sur une assiette" loading="lazy" width="1100" height="1300">
+        </figure>
+      </article>
+
+      <!-- Beignets de Hanouka : section saisonnière, à masquer hors saison (class="feature" → ajouter hidden) -->
+      <article class="feature feature--reverse feature--season" id="hanouka">
+        <div class="feature__text reveal">
+          <p class="eyebrow" data-i18n="sp.4.eyebrow">En saison · Hanouka</p>
+          <h3 class="h2" data-i18n="sp.4.title">Les beignets de Hanouka</h3>
+          <p data-i18n="sp.4.text">Chaque année, pour la fête des lumières, nos beignets dorés reviennent en vitrine, nature ou garnis.</p>
+          <!-- PRIX À CONFIRMER chaque saison -->
+          <dl class="pricelist">
+            <div><dt data-i18n="sp.4.p1">Nature</dt><dd>2,00 €</dd></div>
+            <div><dt data-i18n="sp.4.p2">Confiture framboise, crème pâtissière, caramel, compote de pomme, chocolat praliné</dt><dd>2,80 €</dd></div>
+            <div><dt data-i18n="sp.4.p3">Fruit de la passion, pistache</dt><dd>3,00 €</dd></div>
+          </dl>
+        </div>
+        <figure class="feature__media zoom reveal">
+          <img src="images/beignets-hanouka.jpg" alt="Plateaux de beignets garnis de confiture et saupoudrés de sucre" loading="lazy" width="1100" height="1300">
+        </figure>
+      </article>
+    </section>
+
+    <!-- ============ Notre histoire ============ -->
+    <section class="story section" id="histoire" aria-labelledby="story-title">
+      <div class="container story__grid">
+        <figure class="story__frame reveal">
+          <img src="images/petrissage.jpg" alt="Mains de boulanger pétrissant une pâte sur un plan fariné" loading="lazy" width="1100" height="1300">
+        </figure>
+        <div class="story__text reveal">
+          <p class="script script--lg" data-i18n="story.script">Une histoire de famille</p>
+          <h2 class="h2" id="story-title" data-i18n="story.title">Notre histoire</h2>
+          <!-- TEXTE À VALIDER AVEC LE GÉRANT : remplacer par l'histoire réelle de la maison
+               (fondateurs, générations, anecdotes). Rien n'est inventé ci-dessous, hormis
+               la date 1909 relevée sur l'étiquette de la boutique. -->
+          <p data-i18n="story.p1">Rue des Rosiers, il y a des adresses qui font partie du paysage. Depuis 1909, la Boulangerie Murciano en est une : une boulangerie familiale où se croisent les habitués du quartier et les visiteurs venus du monde entier.</p>
+          <p data-i18n="story.p2">Ici, la tradition française — pains, viennoiseries, macarons — partage la vitrine avec les recettes ashkénazes : babka, strudel, gâteau au pavot, cheesecake et 'hallot tressées pour le Chabbat. Une façade bleu nuit aux lettres d'or, un plafond peint en ciel, des présentoirs en fer forgé : le décor d'une maison parisienne qui a gardé son âme.</p>
+          <p class="placeholder-note" data-i18n="story.note">[Texte de démonstration — l'histoire de la famille sera rédigée avec la maison.]</p>
+        </div>
+      </div>
+
+      <!-- Vidéo de la boutique (YouTube, chaîne « Alloj Le Live ») — chargée seulement au clic.
+           DROITS À CONFIRMER avec l'auteur de la vidéo avant mise en ligne définitive. -->
+      <div class="container video reveal">
+        <button class="video__facade" type="button" data-yt="rSr8DqODMQg" aria-label="Lire la vidéo : la Boulangerie Murciano en images" data-i18n-aria="video.aria">
+          <img src="https://i.ytimg.com/vi/rSr8DqODMQg/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          <span class="video__play"><svg width="28" height="28" aria-hidden="true"><use href="#i-play"/></svg></span>
+          <span class="video__caption"><span class="script" data-i18n="video.script">En images</span><span data-i18n="video.title">La boutique, rue des Rosiers</span></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ============ Nos produits ============ -->
+    <section class="products section tiles" id="produits" aria-labelledby="products-title">
+      <div class="container">
+        <header class="section-head center reveal">
+          <svg class="orn" width="160" height="20" aria-hidden="true"><use href="#i-orn"/></svg>
+          <h2 class="h2" id="products-title" data-i18n="products.title">Nos produits</h2>
+          <p class="lead" data-i18n="products.lead">Du pain du quotidien aux gâteaux des grandes occasions. La vitrine change avec les saisons et les fêtes.</p>
+        </header>
+
+        <div class="filters" role="group" aria-label="Filtrer par catégorie" data-i18n-aria="products.filter">
+          <button class="filter is-active" aria-pressed="true" data-filter="all" data-i18n="cat.all">Tout</button>
+          <button class="filter" aria-pressed="false" data-filter="pains" data-i18n="cat.pains">Pains &amp; 'hallot</button>
+          <button class="filter" aria-pressed="false" data-filter="viennoiseries" data-i18n="cat.viennoiseries">Viennoiseries</button>
+          <button class="filter" aria-pressed="false" data-filter="ashkenazes" data-i18n="cat.ashkenazes">Pâtisseries ashkénazes</button>
+          <button class="filter" aria-pressed="false" data-filter="francaises" data-i18n="cat.francaises">Pâtisseries françaises</button>
+          <button class="filter" aria-pressed="false" data-filter="fetes" data-i18n="cat.fetes">Gâteaux de fête</button>
+          <button class="filter" aria-pressed="false" data-filter="sale" data-i18n="cat.sale">Salé &amp; sandwichs</button>
+        </div>
+
+        <!-- PRODUITS : dupliquer une <li class="card"> pour en ajouter.
+             data-cat = catégorie du filtre. Prix optionnel (laisser vide = « Prix en boutique »). -->
+        <ul class="grid" id="productGrid">
+          <li class="card" data-cat="pains">
+            <div class="card__media zoom"><img src="images/pain-campagne.jpg" alt="Pain de campagne rond à la croûte farinée" loading="lazy" width="800" height="640"></div>
+            <div class="card__body"><h3 data-i18n="p.campagne">Pain de campagne</h3><p data-i18n="p.campagne.d">Croûte épaisse, mie dense et parfumée.</p><span class="card__price" data-price=""></span></div>
+          </li>
+          <li class="card" data-cat="pains">
+            <div class="card__media zoom"><img src="images/hallah-tressee.jpg" alt="'Hallot tressées et dorées" loading="lazy" width="800" height="640"></div>
+            <div class="card__body"><h3 data-i18n="p.hallah">'Hallah tressée</h3><p data-i18n="p.hallah.d">Nature ou au sésame, pour la table du Chabbat.</p><span class="card__price" data-price=""></span></div>
+          </li>
+          <li class="card" data-cat="viennoiseries">
+            <div class="card__media zoom"><img src="images/pain-au-chocolat.jpg" alt="Pains au chocolat feuilletés" loading="lazy" width="800" height="640"></div>
+            <div class="card__body"><h3 data-i18n="p.pac">Pain au chocolat</h3><p data-i18n="p.pac.d">Feuilleté, doré, deux barres de chocolat.</p><span class="card__price" data-price=""></span></div>
+          </li>
+          <li class="card" data-cat="viennoiseries">
+            <div class="card__media zoom"><img src="images/viennoiseries.jpg" alt="Plateau de viennoiseries variées" loading="lazy" width="800" height="640"></div>
+            <div class="card__body"><h3 data-i18n="p.vien">Croissants &amp; viennoiseries</h3><p data-i18n="p.vien.d">Croissants, chaussons, brioches du matin.</p><span class="card__price" data-price=""></span></div>
+          </li>
+          <li class="card" data-cat="ashkenazes">
+            <div class="card__media zoom"><img src="images/babka-chocolat.jpg" alt="Babka au chocolat" loading="lazy" width="900" height="1064"></div>
+            <div class="card__body"><h3 data-i18n="p.babka">Babka au chocolat</h3><p data-i18n="p.babka.d">Brioche tressée, marbrée de chocolat.</p><span class="card__price" data-price=""></span></div>
+          </li>
+          <li class="card" data-cat="ashkenazes">
+            <div class="card__media zoom"><img src="images/cheesecake.jpg" alt="Part de cheesecake" loading="lazy" width="1100" height="1300"></div>
+            <div class="card__body"><h3 data-i18n="p.cheese">Gâteau au fromage</h3><p data-i18n="p.cheese.d">Le cheesecake de la maison.</p><span class="card__price" data-price=""></span></div>
+          </li>
+          <li class="card" data-cat="ashkenazes">
+            <div class="card__media zoom"><img src="images/strudel.jpg" alt="Strudel aux pommes" loading="lazy" width="1100" height="1300"></div>
+            <div class="card__body"><h3 data-i18n="p.strudel">Strudel</h3><p data-i18n="p.strudel.d">Pommes, raisins, cannelle.</p><span class="card__price" data-price=""></span></div>
+          </li>
+          <li class="card" data-cat="ashkenazes">
+            <!-- PHOTO À REMPLACER : photo d'illustration, en attente d'une vraie photo du gâteau au pavot -->
+            <div class="card__media zoom"><img src="images/gateau-pavot.jpg" alt="Gâteau moelleux saupoudré de sucre glace (photo d'illustration)" loading="lazy" width="800" height="640"></div>
+            <div class="card__body"><h3 data-i18n="p.pavot">Gâteau au pavot</h3><p data-i18n="p.pavot.d">Moelleux, généreux en graines de pavot.</p><span class="card__price" data-price=""></span></div>
+          </li>
+          <li class="card" data-cat="francaises">
+            <div class="card__media zoom"><img src="images/macarons.jpg" alt="Macarons aux couleurs pastel" loading="lazy" width="800" height="640"></div>
+            <div class="card__body"><h3 data-i18n="p.macarons">Macarons</h3><p data-i18n="p.macarons.d">Coques fines, parfums de saison.</p><span class="card__price" data-price=""></span></div>
+          </li>
+          <li class="card" data-cat="francaises fetes">
+            <div class="card__media zoom"><img src="images/gateau-fete.jpg" alt="Gâteau au chocolat décoré de rosaces" loading="lazy" width="800" height="640"></div>
+            <div class="card__body"><h3 data-i18n="p.entremets">Entremets &amp; gâteaux sur mesure</h3><p data-i18n="p.entremets.d">Anniversaires, fiançailles, mariages.</p><span class="card__price" data-price=""></span></div>
+          </li>
+          <li class="card" data-cat="fetes">
+            <div class="card__media zoom"><img src="images/hanouka-menorah.jpg" alt="Hanoukia allumée et beignets de Hanouka" loading="lazy" width="800" height="640"></div>
+            <div class="card__body"><h3 data-i18n="p.beignets">Beignets de Hanouka</h3><p data-i18n="p.beignets.d">En saison, nature ou garnis.</p><span class="card__price" data-price="2 €" data-price-prefix="dès">dès 2 €</span></div>
+          </li>
+          <li class="card" data-cat="fetes">
+            <div class="card__media zoom"><img src="images/patisseries-ashkenazes.jpg" alt="Table de pâtisseries variées pour un buffet" loading="lazy" width="800" height="640"></div>
+            <div class="card__body"><h3 data-i18n="p.buffet">Plateaux &amp; buffets</h3><p data-i18n="p.buffet.d">Bar-mitsva, Chabbat, réceptions.</p><span class="card__price" data-price=""></span></div>
+          </li>
+          <li class="card" data-cat="sale">
+            <div class="card__media zoom"><img src="images/sandwich.jpg" alt="Sandwich garni" loading="lazy" width="800" height="640"></div>
+            <div class="card__body"><h3 data-i18n="p.sandwich">Sandwichs</h3><p data-i18n="p.sandwich.d">Préparés chaque jour, à emporter.</p><span class="card__price" data-price=""></span></div>
+          </li>
+          <li class="card" data-cat="sale">
+            <div class="card__media zoom"><img src="images/cafe-croissants.jpg" alt="Café crème et croissants" loading="lazy" width="800" height="640"></div>
+            <div class="card__body"><h3 data-i18n="p.cafe">Café &amp; pause sur place</h3><p data-i18n="p.cafe.d">Un café avec une part de babka ?</p><span class="card__price" data-price=""></span></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ Commandes de fêtes ============ -->
+    <section class="orders section" id="commandes" aria-labelledby="orders-title">
+      <div class="container orders__grid">
+        <div class="orders__intro reveal">
+          <p class="script script--lg" data-i18n="orders.script">Pour vos grands jours</p>
+          <h2 class="h2" id="orders-title" data-i18n="orders.title">Commandes de fêtes &amp; événements</h2>
+          <p data-i18n="orders.text">Gâteaux sur mesure, buffets sucrés et salés, plateaux de pâtisseries : la maison accompagne vos célébrations, cachère de la première à la dernière bouchée.</p>
+          <ul class="occasions">
+            <li data-i18n="orders.o1">Bar &amp; bat-mitsva</li>
+            <li data-i18n="orders.o2">Mariages &amp; fiançailles</li>
+            <li data-i18n="orders.o3">Chabbat &amp; Kiddouch</li>
+            <li data-i18n="orders.o4">Roch Hachana</li>
+            <li data-i18n="orders.o5">Hanouka</li>
+            <li data-i18n="orders.o6">Pourim</li>
+            <li data-i18n="orders.o7">Anniversaires</li>
+          </ul>
+          <p class="small" data-i18n="orders.delay">Merci de nous contacter au moins quelques jours à l'avance (délai à confirmer selon la commande). Pour une demande urgente, appelez-nous.</p>
+          <a class="btn btn--navy" href="tel:+33148874888" data-tel><svg width="18" height="18" aria-hidden="true"><use href="#i-phone"/></svg> 01 48 87 48 88</a>
+        </div>
+
+        <form class="form reveal" id="orderForm" novalidate>
+          <h3 class="form__title" data-i18n="form.title">Votre demande</h3>
+          <div class="field">
+            <label for="f-name" data-i18n="form.name">Nom et prénom</label>
+            <input id="f-name" name="nom" type="text" autocomplete="name" required>
+            <p class="field__error" data-i18n="form.err.name">Merci d'indiquer votre nom.</p>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-phone" data-i18n="form.phone">Téléphone</label>
+              <input id="f-phone" name="telephone" type="tel" autocomplete="tel" inputmode="tel" required pattern="[0-9+().\s-]{8,}">
+              <p class="field__error" data-i18n="form.err.phone">Merci d'indiquer un numéro valide.</p>
+            </div>
+            <div class="field">
+              <label for="f-date" data-i18n="form.date">Date souhaitée</label>
+              <input id="f-date" name="date" type="date" required>
+              <p class="field__error" data-i18n="form.err.date">Merci de choisir une date.</p>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-type" data-i18n="form.type">Type de commande</label>
+            <select id="f-type" name="type" required>
+              <option value="" data-i18n="form.type.0">Choisir…</option>
+              <option data-i18n="form.type.1">Gâteau sur mesure</option>
+              <option data-i18n="form.type.2">Buffet / plateaux</option>
+              <option data-i18n="form.type.3">Bar / bat-mitsva</option>
+              <option data-i18n="form.type.4">Mariage</option>
+              <option data-i18n="form.type.5">Chabbat ('hallot, gâteaux)</option>
+              <option data-i18n="form.type.6">Fête juive (Roch Hachana, Hanouka, Pourim…)</option>
+              <option data-i18n="form.type.7">Autre</option>
+            </select>
+            <p class="field__error" data-i18n="form.err.type">Merci de choisir un type de commande.</p>
+          </div>
+          <div class="field">
+            <label for="f-msg"><span data-i18n="form.msg">Votre message</span> <span class="optional" data-i18n="form.optional">(facultatif)</span></label>
+            <textarea id="f-msg" name="message" rows="4" data-i18n-placeholder="form.msg.ph" placeholder="Nombre de personnes, parfums, allergies, livraison…"></textarea>
+          </div>
+          <!-- anti-spam (champ invisible) -->
+          <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn btn--gold btn--block" type="submit" data-i18n="form.submit">Envoyer ma demande</button>
+          <p class="form__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ Retrait / Livraison ============ -->
+    <section class="services" aria-label="Retrait et livraison" data-i18n-aria="services.aria">
+      <div class="container services__grid">
+        <div class="service reveal">
+          <svg class="service__icon" width="34" height="34" aria-hidden="true"><use href="#i-bag"/></svg>
+          <h2 class="h3" data-i18n="services.1.title">Retrait en boutique</h2>
+          <p data-i18n="services.1.text">Sur place ou à emporter, tous les jours sauf le samedi. Vos commandes de fêtes sont prêtes à l'heure convenue, au 16 rue des Rosiers.</p>
+          <a class="link-arrow" href="#infos"><span data-i18n="services.1.link">Horaires &amp; accès</span><svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="service reveal">
+          <svg class="service__icon" width="34" height="34" aria-hidden="true"><use href="#i-bike"/></svg>
+          <h2 class="h3" data-i18n="services.2.title">Livraison</h2>
+          <!-- MODALITÉS À CONFIRMER : zone, plateformes (Uber Eats, Deliveroo…), minimum de commande -->
+          <p data-i18n="services.2.text">Nos pains et pâtisseries se font aussi livrer dans Paris. Pour une commande d'événement, la livraison se convient directement avec la boutique.</p>
+          <a class="link-arrow" href="#commandes"><span data-i18n="services.2.link">Faire une demande</span><svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Ils parlent de nous ============ -->
+    <section class="reviews section sky" aria-labelledby="reviews-title">
+      <div class="container narrow center reveal">
+        <p class="script script--lg" data-i18n="reviews.script">Ils parlent de nous</p>
+        <h2 class="visually-hidden" id="reviews-title" data-i18n="reviews.title">Avis clients</h2>
+        <!-- NOTE GOOGLE À METTRE À JOUR (relevé : octobre 2026) -->
+        <p class="rating" aria-label="Note Google : 4,1 sur 5, 586 avis" data-i18n-aria="reviews.aria">
+          <span class="rating__score">4,1</span>
+          <span class="rating__stars" style="--rating:4.1" aria-hidden="true">
+            <span class="rating__bg"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+            <span class="rating__fg"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+          </span>
+        </p>
+        <p class="rating__count" data-i18n="reviews.count">sur Google · 586 avis d'habitués du quartier et de visiteurs du monde entier</p>
+        <a class="btn btn--navy" href="https://www.google.com/maps/search/?api=1&amp;query=Boulangerie%20Murciano%2016%20rue%20des%20Rosiers%2075004%20Paris" target="_blank" rel="noopener" data-i18n="reviews.cta">Lire les avis sur Google</a>
+      </div>
+    </section>
+
+    <!-- ============ Infos pratiques ============ -->
+    <section class="info section" id="infos" aria-labelledby="info-title">
+      <div class="container">
+        <header class="section-head center reveal">
+          <svg class="orn" width="160" height="20" aria-hidden="true"><use href="#i-orn"/></svg>
+          <h2 class="h2" id="info-title" data-i18n="info.title">Infos pratiques</h2>
+        </header>
+        <div class="info__grid">
+          <div class="info__details reveal">
+            <div class="info__block">
+              <svg width="24" height="24" aria-hidden="true"><use href="#i-pin"/></svg>
+              <div>
+                <h3 class="h4" data-i18n="info.address">Adresse</h3>
+                <address>16 rue des Rosiers<br>75004 Paris · Le Marais</address>
+              </div>
+            </div>
+            <div class="info__block">
+              <svg width="24" height="24" aria-hidden="true"><use href="#i-metro"/></svg>
+              <div>
+                <h3 class="h4" data-i18n="info.access">Accès</h3>
+                <p data-i18n="info.metro">Métro Saint-Paul (ligne 1), à 5 min à pied</p>
+              </div>
+            </div>
+            <div class="info__block">
+              <svg width="24" height="24" aria-hidden="true"><use href="#i-phone"/></svg>
+              <div>
+                <h3 class="h4" data-i18n="info.phone">Téléphone</h3>
+                <p><a class="tel-link" href="tel:+33148874888" data-tel>01 48 87 48 88</a></p>
+              </div>
+            </div>
+            <div class="info__block">
+              <svg width="24" height="24" aria-hidden="true"><use href="#i-clock"/></svg>
+              <div class="info__hours">
+                <h3 class="h4"><span data-i18n="info.hours">Horaires</span> <span class="status" data-open-status></span></h3>
+                <!-- Tableau généré depuis js/config.js — HORAIRES À CONFIRMER -->
+                <table class="hours" id="hoursTable"><caption class="visually-hidden" data-i18n="info.hours">Horaires</caption><tbody></tbody></table>
+                <p class="small" data-i18n="info.hoursNote">Fermé le samedi (Chabbat). Fermeture plus tôt le vendredi et les veilles de fêtes.</p>
+              </div>
+            </div>
+            <a class="btn btn--gold" href="https://www.google.com/maps/dir/?api=1&amp;destination=Boulangerie%20Murciano%2016%20rue%20des%20Rosiers%2075004%20Paris" target="_blank" rel="noopener"><svg width="18" height="18" aria-hidden="true"><use href="#i-route"/></svg> <span data-i18n="cta.route">Itinéraire</span></a>
+          </div>
+          <div class="info__map reveal">
+            <iframe title="Carte : Boulangerie Murciano, 16 rue des Rosiers, Paris" data-i18n-title="info.mapTitle" src="https://maps.google.com/maps?q=Boulangerie%20Murciano%2C%2016%20rue%20des%20Rosiers%2C%2075004%20Paris&amp;z=17&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ (utile aux touristes et aux moteurs IA) ============ -->
+    <section class="faq section tiles" aria-labelledby="faq-title">
+      <div class="container narrow">
+        <h2 class="h2 center reveal" id="faq-title" data-i18n="faq.title">Questions fréquentes</h2>
+        <div class="faq__list reveal">
+          <details><summary data-i18n="faq.q1">La boulangerie est-elle cachère ?</summary><p data-i18n="faq.a1">Oui. La Boulangerie Murciano est cachère, sous la surveillance du Rav Rottenberg.</p></details>
+          <details><summary data-i18n="faq.q2">Êtes-vous ouverts le samedi ?</summary><p data-i18n="faq.a2">Non, la boutique est fermée le samedi pour Chabbat, et ferme plus tôt le vendredi. Retrouvez les horaires détaillés ci-dessus.</p></details>
+          <details><summary data-i18n="faq.q3">Comment venir ?</summary><p data-i18n="faq.a3">Au 16 rue des Rosiers, dans le Marais (Paris 4e). Le métro le plus proche est Saint-Paul, sur la ligne 1, à environ 5 minutes à pied.</p></details>
+          <details><summary data-i18n="faq.q4">Peut-on commander pour une bar-mitsva ou un mariage ?</summary><p data-i18n="faq.a4">Oui : gâteaux sur mesure, buffets et plateaux pour bar et bat-mitsva, mariages, Chabbat et fêtes juives. Utilisez le formulaire de commande ou appelez-nous.</p></details>
+          <details><summary data-i18n="faq.q5">Peut-on manger sur place ?</summary><p data-i18n="faq.a5">Oui, vous pouvez déguster nos pâtisseries avec un café sur place, ou tout emporter.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <p class="footer__logo">Murciano</p>
+        <p class="footer__since"><span data-i18n="logo.since">depuis</span> 1909</p>
+        <svg class="footer__hallah" width="64" height="40" aria-hidden="true"><use href="#i-hallah"/></svg>
+        <p class="footer__kosher" data-i18n="kosher.footer">Établissement cachère, sous la surveillance du Rav Rottenberg</p>
+      </div>
+      <div>
+        <h2 class="footer__title" data-i18n="footer.contact">Nous trouver</h2>
+        <address>16 rue des Rosiers<br>75004 Paris</address>
+        <p><a href="tel:+33148874888" data-tel>01 48 87 48 88</a></p>
+        <p data-i18n="info.metro">Métro Saint-Paul (ligne 1), à 5 min à pied</p>
+      </div>
+      <div>
+        <h2 class="footer__title" data-i18n="info.hours">Horaires</h2>
+        <ul class="footer__hours" id="footerHours"></ul>
+      </div>
+      <div>
+        <h2 class="footer__title" data-i18n="footer.follow">Suivez-nous</h2>
+        <!-- LIENS RÉSEAUX SOCIAUX À COMPLÉTER -->
+        <p class="footer__social">
+          <a href="#" aria-label="Instagram (lien à venir)"><svg width="22" height="22" aria-hidden="true"><use href="#i-insta"/></svg></a>
+          <a href="#" aria-label="Facebook (lien à venir)"><svg width="22" height="22" aria-hidden="true"><use href="#i-fb"/></svg></a>
+        </p>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <svg class="orn" width="160" height="20" aria-hidden="true"><use href="#i-orn"/></svg>
+      <p>© <span id="year">2026</span> Boulangerie Murciano · <a href="mentions-legales.html" data-i18n="footer.legal">Mentions légales</a></p>
+    </div>
+  </footer>
+
+  <!-- ============ Barre d'actions mobile ============ -->
+  <div class="mobile-bar" role="group" aria-label="Actions rapides" data-i18n-aria="mobilebar.aria">
+    <a href="tel:+33148874888" data-tel><svg width="20" height="20" aria-hidden="true"><use href="#i-phone"/></svg><span data-i18n="cta.call">Appeler</span></a>
+    <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Boulangerie%20Murciano%2016%20rue%20des%20Rosiers%2075004%20Paris" target="_blank" rel="noopener"><svg width="20" height="20" aria-hidden="true"><use href="#i-route"/></svg><span data-i18n="cta.route">Itinéraire</span></a>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

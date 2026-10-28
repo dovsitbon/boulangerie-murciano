@@ -1,0 +1,15 @@
+# Boulangerie Murciano
+
+> Boulangerie-pâtisserie cachère du Marais à Paris, depuis 1909. Kosher bakery and pastry shop in the Marais, Paris, since 1909.
+
+- Adresse / Address : 16 rue des Rosiers, 75004 Paris, France (métro Saint-Paul, ligne 1)
+- Téléphone / Phone : +33 1 48 87 48 88
+- Cachère / Kosher : sous la surveillance du Rav Rottenberg
+- Horaires / Hours (à confirmer) : dimanche–jeudi 8h30–19h, vendredi 8h30–15h, fermé le samedi (Chabbat)
+- Spécialités / Specialities : gâteau au fromage (cheesecake), strudel, gâteau au pavot (poppy seed cake), babka au chocolat, 'hallot (challah), pain de campagne, pain au chocolat, macarons, beignets de Hanouka (sufganiyot, en saison)
+- Services : sur place, à emporter, livraison, commandes pour bar-mitsva, mariages, Chabbat et fêtes juives
+- Avis Google : 4,1/5 (586 avis)
+
+## Pages
+- [Accueil / Home](https://boulangerie-murciano.vercel.app/)
+- [English version](https://boulangerie-murciano.vercel.app/?lang=en)
